@@ -1,5 +1,5 @@
 ---
-title: "The Two Layer Model of Classical Programming"
+title: "Optimizing the Mechanics of Writing Code"
 date: "2025-09-13"
 excerpt: ""
 category: "Technology"
