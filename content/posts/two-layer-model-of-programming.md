@@ -22,7 +22,7 @@ This obsession with gaming micro and my dislike of the 'micro' of coding has lea
 
 In high school, I used to use Jetbrains for everything. I had toyed around with Atom, and hated how slow and awkward using plugin-based text editors were. This dislike has continued to this day and is partially why I've never really used VSCode. 
 
-Jetbrains was fast, and as an IDE it came with lots of really useful tools. Over the thousands of hours I spent building random projects in high school, I learnt the ins and outs of refactoring, searching, debugging, etc. with it. Even better, I could switch languages seemlessly and all the IDEs were pretty much identical.
+Jetbrains was fast, and as an IDE it came with lots of really useful tools. Over the thousands of hours I spent building random projects in high school, I learnt the ins and outs of refactoring, searching, debugging, etc. with it. Even better, I could switch languages seemlessly and my muscle memory worked between all the Jetbrains IDEs. 
 
 In college, I wanted to apply my optimization of gaming micro to programming to make it more fun. I debated between learning Emacs and Vim, and ended up going with Emacs because it was programmable via Lisp. I had an obsession with Lisp after one too many Paul Graham articles and figured this would be good way to get exposure. I also thought the idea of having to press 3 keys just to type a character in Vim was ludicrous (insert mode -> character -> esc). 
 
@@ -36,9 +36,8 @@ I jumped at the chance to reprogram my keyboard and make tricky keys to hit a lo
 
 One thing that's happened is that my keyboard itself is modal, just like vim. For example, I made it so if I click a thumb key, the next key I type is treated as a symbol. So 'a' might become =, 's' is remapped to +, etc. Hence, my hands don't need to leave the homerow to type symbols. I've also put all my modifier keys on the home row, so that for example tapping the F-key signals an 'f' but holding it signals a shift code. This makes all keyboard shortcuts much easier to type.
 
-If you pick one change to make, i'd highly recommend learning Vim: A suprising number of sites have integrated Vim natively, including Leetcode, Jupyter Notebooks, and Reddit.
+If this has piqued your interest in optimizing your coding mechanics, i'd highly recommend starting by learning Vim: A suprising number of sites have integrated Vim natively, including Leetcode, Jupyter Notebooks, and Reddit making it super valuable to know.
 
-
-## On AI
+## Aside on AI
 
 Someone might say optimizing for micro is become redundant because of AI, which can take over a lot of the tedium of writing code. I agree in some cases: code that is frequently written, full of boilerplate, etc. should absolutely be automated via LLMs. However, niche fields, novel algorithms, weird languages and such causes LLMs to produce gibberish at a high rate. As I code mostly in these spaces for my jobs, which use obscure languages, niche business logic, and closed source libraries, I've found that writing code classically is (for now) much more efficient than using AI.
