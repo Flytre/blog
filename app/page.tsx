@@ -5,55 +5,60 @@ export default async function Home() {
   const latestPosts = await getLatestPosts(3)
 
   return (
-    <div className="max-w-2xl mx-auto px-4 py-16">
-      {/* Hero Section - Ultra Minimal */}
-      <section className="mb-16">
-        <h1 className="text-2xl font-mono text-white mb-4">
-          hi, i'm flytre
+    <div className="max-w-4xl mx-auto px-4 py-8">
+      {/* Hero Section - Medium Inspired */}
+      <section className="mb-12 text-center">
+        <h1 className="text-3xl font-medium text-black mb-3 leading-tight">
+          Hello. I'm Flytre.
         </h1>
-        <p className="text-gray-400 font-mono text-sm leading-relaxed mb-8">
-          software engineer & writer
+        <p className="text-lg text-black mb-4 max-w-3xl mx-auto leading-relaxed">
+          creative technologist & digital storyteller
         </p>
-        <p className="text-gray-500 font-mono text-sm leading-relaxed">
-          i write about technology, systems, and the things that interest me.
+        <p className="text-lg text-black max-w-4xl mx-auto leading-relaxed">
+          i explore the intersection of technology and creativity, 
+          writing about the stories behind the code and the art in the algorithms.
         </p>
       </section>
 
-      {/* Latest Posts - Minimal List */}
+      {/* Latest Posts - Clean List */}
       <section>
-        <h2 className="text-sm font-mono text-gray-500 mb-6 uppercase tracking-wider">
-          recent posts
-        </h2>
-        <div className="space-y-6">
-          {latestPosts.map((post) => (
-            <article key={post.slug} className="border-b border-gray-800 pb-6 last:border-b-0">
-              <div className="flex items-start justify-between mb-2">
-                <Link 
-                  href={`/blog/${post.slug}`}
-                  className="text-white hover:text-gray-300 transition-colors font-mono text-sm"
-                >
-                  {post.title}
-                </Link>
-                <time className="text-gray-600 font-mono text-xs ml-4 flex-shrink-0">
+        <div className="space-y-8">
+          {latestPosts.map((post, index) => (
+            <article key={post.slug} className="border-b border-yellow-200 pb-6">
+              <div className="mb-2">
+                <span className="text-sm text-yellow-700">
+                  {post.category}
+                </span>
+                <span className="text-gray-400 mx-2">•</span>
+                <time className="text-sm text-black">
                   {new Date(post.date).toLocaleDateString('en-US', {
-                    month: 'short',
-                    day: 'numeric'
+                    month: 'long',
+                    day: 'numeric',
+                    year: 'numeric'
                   })}
                 </time>
               </div>
-              <p className="text-gray-500 font-mono text-xs leading-relaxed">
-                {post.excerpt}
-              </p>
+              <Link 
+                href={`/blog/${post.slug}`}
+                className="block hover:text-yellow-700 transition-colors"
+              >
+                <h3 className="text-lg font-medium text-black mb-1">
+                  {post.title}
+                </h3>
+                <p className="text-black leading-relaxed">
+                  {post.excerpt}
+                </p>
+              </Link>
             </article>
           ))}
         </div>
         
-        <div className="mt-8">
+        <div className="mt-12 text-center">
           <Link
             href="/blog"
-            className="text-gray-500 hover:text-white transition-colors font-mono text-xs"
+            className="text-yellow-700 hover:text-yellow-900 font-medium transition-colors"
           >
-            view all posts →
+            view all posts
           </Link>
         </div>
       </section>

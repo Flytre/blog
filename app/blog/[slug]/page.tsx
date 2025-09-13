@@ -24,28 +24,25 @@ export default async function PostPage({ params }: PostPageProps) {
   const contentHtml = processedContent.toString()
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8">
+    <div className="max-w-4xl mx-auto px-4 py-6">
       {/* Back to Blog */}
-      <div className="mb-8">
+      <div className="mb-6">
         <Link
           href="/blog"
-          className="text-blue-600 hover:text-blue-700 transition-colors flex items-center gap-2"
+          className="text-yellow-700 hover:text-yellow-900 transition-colors"
         >
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-          </svg>
           Back to Blog
         </Link>
       </div>
 
       {/* Article Header */}
-      <header className="mb-8">
-        <div className="flex items-center gap-2 mb-4">
-          <span className="text-sm text-blue-600 font-medium">
+      <header className="mb-6">
+        <div className="mb-3">
+          <span className="text-sm text-yellow-700">
             {post.category}
           </span>
-          <span className="text-gray-400">•</span>
-          <time className="text-sm text-gray-500">
+          <span className="text-gray-400 mx-2">•</span>
+          <time className="text-sm text-black">
             {new Date(post.date).toLocaleDateString('en-US', {
               year: 'numeric',
               month: 'long',
@@ -54,26 +51,13 @@ export default async function PostPage({ params }: PostPageProps) {
           </time>
         </div>
         
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">
+        <h1 className="text-2xl font-medium text-black mb-2">
           {post.title}
         </h1>
         
-        <p className="text-xl text-gray-600 leading-relaxed">
+        <p className="text-lg text-black leading-relaxed">
           {post.excerpt}
         </p>
-
-        {post.tags.length > 0 && (
-          <div className="flex flex-wrap gap-2 mt-4">
-            {post.tags.map((tag) => (
-              <span
-                key={tag}
-                className="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full"
-              >
-                #{tag}
-              </span>
-            ))}
-          </div>
-        )}
       </header>
 
       {/* Article Content */}
@@ -82,23 +66,23 @@ export default async function PostPage({ params }: PostPageProps) {
       </article>
 
       {/* Article Footer */}
-      <footer className="mt-12 pt-8 border-t border-gray-200">
+      <footer className="mt-8 pt-6 border-t border-yellow-300">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
           <div>
-            <p className="text-gray-600">
+            <p className="text-black">
               Thanks for reading! If you enjoyed this article, consider sharing it.
             </p>
           </div>
           <div className="flex gap-4">
             <Link
               href="/blog"
-              className="text-blue-600 hover:text-blue-700 transition-colors font-medium"
+              className="text-yellow-700 hover:text-yellow-900 transition-colors font-medium"
             >
               More Articles
             </Link>
             <Link
               href="/about"
-              className="text-blue-600 hover:text-blue-700 transition-colors font-medium"
+              className="text-yellow-700 hover:text-yellow-900 transition-colors font-medium"
             >
               About Me
             </Link>

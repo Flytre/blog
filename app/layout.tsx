@@ -4,7 +4,7 @@ import Navigation from '@/components/Navigation'
 
 export const metadata: Metadata = {
   title: 'flytre',
-  description: 'software engineer & writer',
+  description: 'creative technologist & digital storyteller',
 }
 
 export default function RootLayout({
@@ -15,13 +15,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="min-h-screen bg-gray-900">
+        <div className="min-h-screen relative">
+          <div className="floating-shape"></div>
+          <div className="floating-shape"></div>
+          <div className="floating-shape"></div>
           <Navigation />
           <main>{children}</main>
-          <footer className="border-t border-gray-800 mt-16">
+          <footer className="border-t-2 border-gray-200 mt-16">
             <div className="max-w-4xl mx-auto px-4 py-8">
               <p className="text-center text-gray-500 text-sm">
-                © 2024 flytre
+                © 2024 flytre • crafted with curiosity
               </p>
             </div>
           </footer>

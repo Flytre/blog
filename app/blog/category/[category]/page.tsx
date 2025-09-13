@@ -21,88 +21,56 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">{categoryName}</h1>
-        <p className="text-lg text-gray-600">
-          Articles in the {categoryName.toLowerCase()} category
-        </p>
-      </div>
+      <h1 className="text-3xl font-medium text-black mb-4 text-center">{categoryName}</h1>
 
       {/* Categories Filter */}
-      <div className="mb-8">
-        <h2 className="text-xl font-semibold text-gray-900 mb-4">Categories</h2>
-        <div className="flex flex-wrap gap-2">
+      <div className="mb-12 text-center">
+        <div className="flex flex-wrap gap-3 justify-center">
           <Link
             href="/blog"
-            className="px-4 py-2 bg-gray-200 text-gray-700 rounded-full text-sm font-medium hover:bg-gray-300 transition-colors"
+            className="px-4 py-2 border border-yellow-600 text-yellow-700 hover:text-yellow-900 hover:border-yellow-800 transition-colors font-medium"
           >
-            All
+            all
           </Link>
           {categories.map((category) => (
             <Link
               key={category}
               href={`/blog/category/${category.toLowerCase()}`}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                category.toLowerCase() === params.category.toLowerCase()
-                  ? 'bg-blue-600 text-white hover:bg-blue-700'
-                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-              }`}
+              className="px-4 py-2 border border-yellow-600 text-yellow-700 hover:text-yellow-900 hover:border-yellow-800 transition-colors font-medium"
             >
-              {category}
+              {category.toLowerCase()}
             </Link>
           ))}
         </div>
       </div>
 
-      {/* Posts Grid */}
+      {/* Posts List */}
       <div className="space-y-8">
         {posts.map((post) => (
-          <article key={post.slug} className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow">
-            <div className="flex items-center gap-2 mb-3">
-              <span className="text-sm text-blue-600 font-medium">
+          <article key={post.slug} className="border-b border-yellow-200 pb-6">
+            <div className="mb-2">
+              <span className="text-sm text-yellow-700">
                 {post.category}
               </span>
-              <span className="text-gray-400">•</span>
-              <time className="text-sm text-gray-500">
+              <span className="text-gray-400 mx-2">•</span>
+              <time className="text-sm text-black">
                 {new Date(post.date).toLocaleDateString('en-US', {
-                  year: 'numeric',
                   month: 'long',
-                  day: 'numeric'
+                  day: 'numeric',
+                  year: 'numeric'
                 })}
               </time>
             </div>
-            
-            <h2 className="text-2xl font-bold text-gray-900 mb-3">
-              <Link 
-                href={`/blog/${post.slug}`}
-                className="hover:text-blue-600 transition-colors"
-              >
-                {post.title}
-              </Link>
-            </h2>
-            
-            <p className="text-gray-600 mb-4 leading-relaxed">
-              {post.excerpt}
-            </p>
-            
-            {post.tags.length > 0 && (
-              <div className="flex flex-wrap gap-2 mb-4">
-                {post.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded"
-                  >
-                    #{tag}
-                  </span>
-                ))}
-              </div>
-            )}
-            
-            <Link
+            <Link 
               href={`/blog/${post.slug}`}
-              className="text-blue-600 font-medium hover:text-blue-700 transition-colors"
+              className="block hover:text-yellow-700 transition-colors"
             >
-              Read more →
+              <h3 className="text-lg font-medium text-black mb-1">
+                {post.title}
+              </h3>
+              <p className="text-black leading-relaxed">
+                {post.excerpt}
+              </p>
             </Link>
           </article>
         ))}
@@ -110,15 +78,18 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
 
       {posts.length === 0 && (
         <div className="text-center py-12">
-          <p className="text-gray-500 text-lg">No posts found in this category.</p>
-          <Link
-            href="/blog"
-            className="text-blue-600 font-medium hover:text-blue-700 transition-colors mt-2 inline-block"
-          >
-            View all posts →
-          </Link>
+          <p className="text-black text-lg">no posts found</p>
         </div>
       )}
     </div>
   )
+}
+
+// Generate static params for all categories
+export async function generateStaticParams() {
+  const categories = await getAllCategories()
+  
+  return categories.map((category) => ({
+    category: category.toLowerCase(),
+  }))
 }
