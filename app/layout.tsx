@@ -24,7 +24,7 @@ export default function RootLayout({
           <footer className="border-t-2 border-gray-200 mt-16">
             <div className="max-w-4xl mx-auto px-4 py-8">
               <p className="text-center text-gray-500 text-sm">
-                © 2024 flytre • crafted with curiosity
+                © 2025 Flytre • All rights reserved
               </p>
             </div>
           </footer>

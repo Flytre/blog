@@ -36,13 +36,12 @@ export default async function PostPage({ params }: PostPageProps) {
       </div>
 
       {/* Article Header */}
-      <header className="mb-6">
-        <div className="mb-3">
-          <span className="text-sm text-yellow-700">
+      <header className="mb-8">
+        <div className="mb-4">
+          <span className="text-sm text-yellow-700 uppercase tracking-wider font-medium">
             {post.category}
           </span>
-          <span className="text-gray-400 mx-2">•</span>
-          <time className="text-sm text-black">
+          <time className="text-sm text-black/60 ml-3">
             {new Date(post.date).toLocaleDateString('en-US', {
               year: 'numeric',
               month: 'long',
@@ -51,13 +50,9 @@ export default async function PostPage({ params }: PostPageProps) {
           </time>
         </div>
         
-        <h1 className="text-2xl font-medium text-black mb-2">
+        <h1 className="text-3xl font-medium text-black leading-tight">
           {post.title}
         </h1>
-        
-        <p className="text-lg text-black leading-relaxed">
-          {post.excerpt}
-        </p>
       </header>
 
       {/* Article Content */}

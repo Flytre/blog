@@ -1,23 +1,12 @@
 export default function About() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
-      <h1 className="text-3xl font-medium text-black mb-4 text-center">about</h1>
+      <h1 className="text-3xl font-medium text-black mb-4 text-center">About</h1>
       
       <div className="max-w-3xl mx-auto">
         <div className="space-y-6 text-lg text-black leading-relaxed">
           <p>
-            i'm a software engineer passionate about building systems that matter. 
-            i write about technology, engineering practices, and the things i'm learning.
-          </p>
-
-          <p>
-            currently focused on distributed systems, performance optimization, 
-            and the intersection of technology and human experience.
-          </p>
-
-          <p>
-            when i'm not coding, you'll find me reading, writing, or exploring 
-            new ideas in technology and beyond.
+            Hi, I'm Flytre. I'm a 20-something year old engineer based in NYC. In the past, I've worked at a unicorn tech startup and in quantitive finance.
           </p>
         </div>
 
@@ -26,26 +15,18 @@ export default function About() {
           <div className="space-y-3 text-center">
             <p>
               <a 
-                href="mailto:your.email@example.com" 
+                href="mailto:flytre@flytre.net" 
                 className="text-yellow-700 hover:text-yellow-900 transition-colors text-lg font-medium"
               >
-                your.email@example.com
+                flytre [ / at ] flytre.net
               </a>
             </p>
             <p>
               <a 
-                href="https://github.com/yourusername" 
+                href="https://github.com/flytre" 
                 className="text-yellow-700 hover:text-yellow-900 transition-colors text-lg font-medium"
               >
-                github.com/yourusername
-              </a>
-            </p>
-            <p>
-              <a 
-                href="https://linkedin.com/in/yourusername" 
-                className="text-yellow-700 hover:text-yellow-900 transition-colors text-lg font-medium"
-              >
-                linkedin.com/in/yourusername
+                github.com/flytre
               </a>
             </p>
           </div>

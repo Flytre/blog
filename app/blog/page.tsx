@@ -30,33 +30,31 @@ export default async function Blog() {
         </div>
       </div>
 
-      {/* Posts List */}
-      <div className="space-y-8">
+      {/* Posts Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {posts.map((post) => (
-          <article key={post.slug} className="border-b border-yellow-200 pb-6">
-            <div className="mb-2">
-              <span className="text-sm text-yellow-700">
-                {post.category}
-              </span>
-              <span className="text-gray-400 mx-2">•</span>
-              <time className="text-sm text-black">
-                {new Date(post.date).toLocaleDateString('en-US', {
-                  month: 'long',
-                  day: 'numeric',
-                  year: 'numeric'
-                })}
-              </time>
-            </div>
+          <article key={post.slug} className="group">
             <Link 
               href={`/blog/${post.slug}`}
-              className="block hover:text-yellow-700 transition-colors"
+              className="block"
             >
-              <h3 className="text-lg font-medium text-black mb-1">
-                {post.title}
-              </h3>
-              <p className="text-black leading-relaxed">
-                {post.excerpt}
-              </p>
+              <div className="bg-white/50 backdrop-blur-sm border border-yellow-200 p-6 hover:bg-white/70 transition-all duration-300 hover:shadow-lg h-full">
+                <div className="mb-3">
+                  <span className="text-xs text-yellow-700 uppercase tracking-wider font-medium">
+                    {post.category}
+                  </span>
+                  <time className="text-xs text-black/60 ml-2">
+                    {new Date(post.date).toLocaleDateString('en-US', {
+                      month: 'short',
+                      day: 'numeric',
+                      year: 'numeric'
+                    })}
+                  </time>
+                </div>
+                <h3 className="text-lg font-medium text-black group-hover:text-yellow-700 transition-colors leading-tight">
+                  {post.title}
+                </h3>
+              </div>
             </Link>
           </article>
         ))}
