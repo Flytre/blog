@@ -6,7 +6,7 @@ category: "Technology"
 tags: ["technology"]
 ---
 
-Over time, I've realized that programming consists of two things: thinking about what code needs to be written, and mechanically writing that code. I've also realized the first part is a lot more fun for me than the second. I love reasoning through problems but I dislike the physical act of writing the code that solves them.
+Over time, I've realized that programming consists of two things: thinking about what code needs to be written, and mechanically writing that code. I've also realized the first part is a lot more fun for me than the second. I love reasoning through problems but dislike the physical act of writing the code that solves them.
 
 This is analogous to how skill is described in video games, which split it into strategy/macro and execution/micro. In league of legends, for example, a player with excellent micro may be able to get up to 90th percentile but plateau because their high level vision for the game is wrong. Similarly, if they know what plays to make but don't have the dexterity, reflexes, and muscle memory to execute them, they will also plateau.
 
