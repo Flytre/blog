@@ -70,6 +70,10 @@
     @apply text-yellow-700 hover:text-yellow-900 transition-colors;
   }
   
+  .prose img {
+    @apply max-w-md w-full h-auto mx-auto my-4;
+  }
+  
   .floating-shape {
     position: absolute;
     background: linear-gradient(45deg, #d4a574, #8b7355);

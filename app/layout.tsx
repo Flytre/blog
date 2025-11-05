@@ -4,7 +4,7 @@ import Navigation from '@/components/Navigation'
 
 export const metadata: Metadata = {
   title: 'flytre',
-  description: 'creative technologist & digital storyteller',
+  description: 'professional engineer',
 }
 
 export default function RootLayout({
