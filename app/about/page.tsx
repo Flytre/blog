@@ -6,7 +6,7 @@ export default function About() {
       <div className="max-w-3xl mx-auto">
         <div className="space-y-6 text-lg text-black leading-relaxed">
           <p>
-            Hi, I'm Flytre. I'm a 20-something year old engineer based in NYC. In the past, I've worked at a unicorn tech startup and in quantitive finance.
+            Hi, I'm Flytre. I'm a 21 year old engineer based in NYC. In the past, I've interned at a unicorn tech startup and in quantitive finance.
           </p>
         </div>
 
