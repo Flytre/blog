@@ -27,3 +27,5 @@ In a sense, this blog is a form of 2). I only write when I feel like it and I wr
 The next part goes into learning deep vs wide, where the author seems to argue to learn deep and the other debater to learn wide. I think it doesn't really matter as long as I'm learning; I'll always be able to find a place for new ideas in my mind map that relates to tons of existing ones.
 
 But I think the main takeaway is to do what you feel like doing, and as long as you have some guardrails (i.e., don't play clash royale 12 hours a day), you'll probably end up better and happier for it. I can relate to this as I'm not currently working and I have tons of random inspirations that come and go. Further, my girlfriend doesn't work and her life consists of doing whatever random project strikes her fancy next.
+
+Sadly, I think a lot of the time doing whatever I want involves spending time with my friends or scrolling Instagram or playing games, but ever so often I do something more intellectual out of intellectual boredom or strong desire.
