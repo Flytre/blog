@@ -57,6 +57,15 @@ export default async function Home() {
             view all posts
           </Link>
         </div>
+
+        <div className="mt-8 text-center">
+          <a
+            href="/beta/night-market/"
+            className="text-sm text-black/60 hover:text-yellow-700 transition-colors"
+          >
+            beta: night market card
+          </a>
+        </div>
       </section>
     </div>
   )
