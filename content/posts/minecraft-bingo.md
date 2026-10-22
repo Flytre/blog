@@ -2,7 +2,7 @@
 title: "Minecraft Bingo"
 date: "2025-11-05"
 excerpt: ""
-category: "Minecraft"
+category: "Projects"
 tags: ["minecraft"]
 ---
 

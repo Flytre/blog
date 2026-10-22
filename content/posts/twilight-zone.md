@@ -1,6 +1,6 @@
 ---
 title: "Twilight Zone"
-date: "2026-10-22"
+date: "2026-10-10"
 excerpt: ""
 category: "Projects"
 tags: ["twilight zone", "graphics"]
