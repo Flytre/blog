@@ -6,6 +6,10 @@ category: "Life"
 tags: ["Life"]
 ---
 
+## Aside
+
+I initially started this draft in September of last year. However, I recognize I have no intention of finishing this work, so as of 10/22/26 I'm going to publish the rough, unfinished draft below for whomever to enjoy.
+
 ## Reductionism
 
 My personal philosophy has been cultivated by a few things, but it's not something I thought much (aka, verbalized) about before college. I took an introductory philosophy class second semester, and through the class I realized how nuanced all popular philosophical models were. I found that there was always a counter-argument or reason why all perspectives sort of fell apart, and my view became that philosophy is just an eternal debate with no answers and infinite questions.
