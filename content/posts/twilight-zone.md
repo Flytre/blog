@@ -2,7 +2,7 @@
 title: "Twilight Zone"
 date: "2026-10-22"
 excerpt: ""
-category: "Twilight Zone"
+category: "Projects"
 tags: ["twilight zone", "graphics"]
 ---
 
@@ -10,7 +10,7 @@ Twilight Zone is a holo card showcase I've been building. It's live at [twilight
 
 ## Website Model
 
-I've decided that each time I work on a project, I will publish whatever I manage to do to \<X\>.flytre.com if possible. This way, there is some record to see what I've been up to (creatively) for myself even if incomplete. I'm too lazy to move it here, but I also jointly developed https://16coders.isotau.com
+I've decided that each time I work on a project, I will publish whatever I manage to do to \<X\>.flytre.com if possible. This way, there is some record to see what I've been up to (creatively) for myself even if incomplete. I'm too lazy to move it here, but I also jointly developed [16coders.isotau.com](https://16coders.isotau.com)
 
 
 ## Creation
@@ -28,7 +28,7 @@ My initial prototype for a holo card was built in Blender. This was my first tim
 
 ## Browser
 
-I worked with AI to generate the same card, [Night Market], in the browser. I wanted to build a relaxing background to get lost spinning the card and watching the light reflect on it, and I think the dust motes falling help a lot with that. I bought a subscription to generate images for all the cards.
+I worked with AI to generate the same card, [Night Market](https://twilight.flytre.com/night-market), in the browser. I wanted to build a relaxing background to get lost spinning the card and watching the light reflect on it, and I think the dust motes falling help a lot with that. I bought a subscription to generate images for all the cards.
 
 The backend uses rust, and I've built up a server & preprocessor & text renderer & data driven configs that make adding cards trivial. Lighting is done in the browser, with text rasterizing etc. being preprocessed by a separate job run before starting the server.
 
